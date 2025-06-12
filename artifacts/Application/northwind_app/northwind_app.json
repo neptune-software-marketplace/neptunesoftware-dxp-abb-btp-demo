@@ -1,0 +1,560 @@
+{
+	"id": "3e49a577-7689-4619-b064-0656fad84af5",
+	"createdAt": "2025-06-11T12:28:53.307Z",
+	"createdBy": "leo.vanhengel@neptune-software.com",
+	"objects": [
+		{
+			"fieldNo": "6d8b0b64-e640-4582-d388-e872278c8aed",
+			"fieldName": "App",
+			"fieldParent": 0,
+			"fieldType": "sap.m.App",
+			"script": "",
+			"customComponent": false,
+			"request": [],
+			"response": [],
+			"attributes": [],
+			"data": [
+				{
+					"fieldNo": "c7716c09-fa55-4a14-aba2-be50acc27170",
+					"fieldName": "DynamicPage",
+					"fieldParent": "6d8b0b64-e640-4582-d388-e872278c8aed",
+					"fieldType": "sap.f.DynamicPage",
+					"script": "",
+					"customComponent": false,
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "afa3a847-1286-4bec-b1f3-825869c1f8b3",
+							"fieldName": "Table",
+							"fieldParent": "c7716c09-fa55-4a14-aba2-be50acc27170",
+							"fieldType": "sap.m.Table",
+							"script": "",
+							"customComponent": false,
+							"bindingValue": "ODataSource>Products",
+							"bindingType": "h",
+							"bindingSource": "oData",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "setInitLoad",
+									"grouping": "Model",
+									"value": "online",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "autoPopinMode",
+									"grouping": "Properties",
+									"value": "true",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "c8b44067-4b2f-456a-e345-8b32f5ec1704",
+									"fieldName": "OverflowToolbar",
+									"fieldParent": "afa3a847-1286-4bec-b1f3-825869c1f8b3",
+									"fieldType": "sap.m.OverflowToolbar",
+									"script": "",
+									"customComponent": false,
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "position",
+											"grouping": "Parent",
+											"value": "HeaderToolbar",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "6ddb6e61-59f2-4111-bbc8-f8c5305a2ebd",
+											"fieldName": "Title",
+											"fieldParent": "c8b44067-4b2f-456a-e345-8b32f5ec1704",
+											"fieldType": "sap.m.Title",
+											"script": "",
+											"customComponent": false,
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "Products",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								},
+								{
+									"fieldNo": "5aaaef45-7305-4b10-d499-7fe6f8909569",
+									"fieldName": "colTableID",
+									"fieldParent": "afa3a847-1286-4bec-b1f3-825869c1f8b3",
+									"fieldType": "sap.m.Column",
+									"script": "",
+									"customComponent": false,
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "width",
+											"grouping": "Properties",
+											"value": "3rem",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "235741ef-cb86-4c0e-eff3-a0d84972732a",
+											"fieldName": "colHTableID",
+											"fieldParent": "5aaaef45-7305-4b10-d499-7fe6f8909569",
+											"fieldType": "sap.m.Text",
+											"script": "",
+											"customComponent": false,
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "ID",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								},
+								{
+									"fieldNo": "63ad56f3-d6c2-453c-eb0b-c3ce03627b6d",
+									"fieldName": "colTableName",
+									"fieldParent": "afa3a847-1286-4bec-b1f3-825869c1f8b3",
+									"fieldType": "sap.m.Column",
+									"script": "",
+									"customComponent": false,
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "width",
+											"grouping": "Properties",
+											"value": "10rem",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "ef7feed7-f845-4afc-e572-8a2c2dc6904e",
+											"fieldName": "colHTableName",
+											"fieldParent": "63ad56f3-d6c2-453c-eb0b-c3ce03627b6d",
+											"fieldType": "sap.m.Text",
+											"script": "",
+											"customComponent": false,
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "Name",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								},
+								{
+									"fieldNo": "60e6e89d-c9d3-492a-8c0d-4e8e6ab5c83c",
+									"fieldName": "colTableDescription",
+									"fieldParent": "afa3a847-1286-4bec-b1f3-825869c1f8b3",
+									"fieldType": "sap.m.Column",
+									"script": "",
+									"customComponent": false,
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "width",
+											"grouping": "Properties",
+											"value": "25rem",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "21a2b7ae-1496-48b9-d516-7252e4209ad2",
+											"fieldName": "colHTableDescription",
+											"fieldParent": "60e6e89d-c9d3-492a-8c0d-4e8e6ab5c83c",
+											"fieldType": "sap.m.Text",
+											"script": "",
+											"customComponent": false,
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "Description",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								},
+								{
+									"fieldNo": "bb1d9893-74c6-470a-ea76-7de70b785ccd",
+									"fieldName": "colTableReleaseDate",
+									"fieldParent": "afa3a847-1286-4bec-b1f3-825869c1f8b3",
+									"fieldType": "sap.m.Column",
+									"script": "",
+									"customComponent": false,
+									"request": [],
+									"response": [],
+									"attributes": [],
+									"data": [
+										{
+											"fieldNo": "71f17c31-7774-48c6-e4bf-af9c5a64955e",
+											"fieldName": "colHTableReleaseDate",
+											"fieldParent": "bb1d9893-74c6-470a-ea76-7de70b785ccd",
+											"fieldType": "sap.m.Text",
+											"script": "",
+											"customComponent": false,
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "ReleaseDate",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								},
+								{
+									"fieldNo": "c87aacdd-005e-4e1a-be0c-48c5f0470167",
+									"fieldName": "colTableRating",
+									"fieldParent": "afa3a847-1286-4bec-b1f3-825869c1f8b3",
+									"fieldType": "sap.m.Column",
+									"script": "",
+									"customComponent": false,
+									"request": [],
+									"response": [],
+									"attributes": [],
+									"data": [
+										{
+											"fieldNo": "528d806f-6383-42da-f31b-388ce69a505c",
+											"fieldName": "colHTableRating",
+											"fieldParent": "c87aacdd-005e-4e1a-be0c-48c5f0470167",
+											"fieldType": "sap.m.Text",
+											"script": "",
+											"customComponent": false,
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "Rating",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								},
+								{
+									"fieldNo": "65dec665-59bc-4be1-cdb8-ea62793b5220",
+									"fieldName": "colTablePrice",
+									"fieldParent": "afa3a847-1286-4bec-b1f3-825869c1f8b3",
+									"fieldType": "sap.m.Column",
+									"script": "",
+									"customComponent": false,
+									"request": [],
+									"response": [],
+									"attributes": [],
+									"data": [
+										{
+											"fieldNo": "39bea1f0-56de-4f89-f500-233788c5690d",
+											"fieldName": "colHTablePrice",
+											"fieldParent": "65dec665-59bc-4be1-cdb8-ea62793b5220",
+											"fieldType": "sap.m.Text",
+											"script": "",
+											"customComponent": false,
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "Price",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								},
+								{
+									"fieldNo": "997b4f73-1078-4650-a91c-326e78c05e8a",
+									"fieldName": "colItemTable",
+									"fieldParent": "afa3a847-1286-4bec-b1f3-825869c1f8b3",
+									"fieldType": "sap.m.ColumnListItem",
+									"script": "",
+									"customComponent": false,
+									"request": [],
+									"response": [],
+									"attributes": [],
+									"data": [
+										{
+											"fieldNo": "8ab64d72-45ad-4475-8009-e731b45e762f",
+											"fieldName": "txtTableID",
+											"fieldParent": "997b4f73-1078-4650-a91c-326e78c05e8a",
+											"fieldType": "sap.m.Text",
+											"script": "",
+											"customComponent": false,
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "{ID}",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "aa1afd25-bd6a-4962-e149-941fcbcced63",
+											"fieldName": "txtTableName",
+											"fieldParent": "997b4f73-1078-4650-a91c-326e78c05e8a",
+											"fieldType": "sap.m.Text",
+											"script": "",
+											"customComponent": false,
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "{Name}",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "9bce6e3b-b39a-4866-811b-8a7992a38130",
+											"fieldName": "txtTableDescription",
+											"fieldParent": "997b4f73-1078-4650-a91c-326e78c05e8a",
+											"fieldType": "sap.m.Text",
+											"script": "",
+											"customComponent": false,
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "{Description}",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "cd67436f-a45c-43b4-ad85-f279ef4108b8",
+											"fieldName": "txtTableReleaseDate",
+											"fieldParent": "997b4f73-1078-4650-a91c-326e78c05e8a",
+											"fieldType": "sap.m.Text",
+											"script": "",
+											"customComponent": false,
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "{ReleaseDate}",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "text",
+													"grouping": "Formatter",
+													"value": "date:BrowserSetting",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "f40d5ed6-ec13-4be7-9593-4e4ad7607bdf",
+											"fieldName": "RatingIndicator",
+											"fieldParent": "997b4f73-1078-4650-a91c-326e78c05e8a",
+											"fieldType": "sap.m.RatingIndicator",
+											"script": "",
+											"customComponent": false,
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "value",
+													"grouping": "Properties",
+													"value": "{Rating}",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "cd498b72-02cd-401a-e375-8b1729298552",
+											"fieldName": "txtTablePrice",
+											"fieldParent": "997b4f73-1078-4650-a91c-326e78c05e8a",
+											"fieldType": "sap.m.Text",
+											"script": "",
+											"customComponent": false,
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "{Price}",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"fieldNo": 99999,
+			"data": [
+				{
+					"fieldNo": "549b53a7-8650-4eb9-f458-7d34194bd5d5",
+					"fieldName": "Javascript",
+					"fieldParent": 99999,
+					"fieldType": "neptune.Script",
+					"script": "file://script/neptune.Script/Javascript.js",
+					"customComponent": false,
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": []
+				},
+				{
+					"fieldNo": "538d495e-7c86-4c93-f3bf-b3e9a19e170c",
+					"fieldName": "ODataSource",
+					"fieldParent": 99999,
+					"fieldType": "sap.ui.model.odata.v2.ODataModel",
+					"script": "",
+					"customComponent": false,
+					"odataSource": "1f38e837-3563-4c65-a4b6-cfb1998bae5a",
+					"request": [],
+					"response": [],
+					"attributes": [
+						{
+							"attribute": "batchRequestFailed",
+							"grouping": "Events",
+							"value": "App.setBusy(false);",
+							"script": "App.setBusy(false);",
+							"translation": []
+						},
+						{
+							"attribute": "batchRequestCompleted",
+							"grouping": "Events",
+							"value": "App.setBusy(false);",
+							"script": "App.setBusy(false);",
+							"translation": []
+						}
+					],
+					"data": []
+				}
+			]
+		},
+		{
+			"fieldNo": 99998,
+			"data": []
+		}
+	],
+	"componentInterface": [],
+	"ver": "25.06.12.0929",
+	"application": "northwind_app",
+	"title": "Northwind Demo Application",
+	"description": "Northwind Demo Application",
+	"enableFileStorage": false,
+	"enableManifest": false,
+	"enableStylesheet": false,
+	"enableObfuscate": false,
+	"onlyRunLaunchpad": false,
+	"disabled": false,
+	"loadLaunchpadCode": null,
+	"loadApplicationCode": null,
+	"appType": "A",
+	"ui5_m": true,
+	"ui5_f": true,
+	"ui5_table": false,
+	"ui5_tnt": false,
+	"ui5_uxap": false,
+	"ui5_chart": false,
+	"ui5_theme": "sap_horizon",
+	"ui5_version": "",
+	"ui5_language": null,
+	"ui5_url": "",
+	"cus_theme": "",
+	"css": "",
+	"compiledCss": null,
+	"header": "",
+	"manifest": "",
+	"globalScript": null,
+	"deleted": false,
+	"libHighchart": false,
+	"libHighmap": false,
+	"publicAccess": false,
+	"ui5_bootstrap": false,
+	"ui5_ionic": false,
+	"useV2AppHandler": false,
+	"compilerTarget": 3,
+	"tabWidth": null,
+	"printWidth": null,
+	"generateVersionOnActivation": false,
+	"activationHistoryCount": 0,
+	"apis": [],
+	"package": "9897f936-67dc-40e3-8136-9b0ef7bd2c81"
+}

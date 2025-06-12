@@ -1,0 +1,73 @@
+{
+	"id": "9897f936-67dc-40e3-8136-9b0ef7bd2c81",
+	"createdAt": "2025-06-11T11:44:30.692Z",
+	"createdBy": "leo.vanhengel@neptune-software.com",
+	"git": {
+		"remote": "https://github.com/neptune-software-marketplace/neptunesoftware-dxp-abb-btp-demo.git"
+	},
+	"name": "neptunesoftware-dxp-abb-btp-demo",
+	"description": "Neptune DXP on SAP BTP Demo Applications",
+	"ver": "25.06.12.1322",
+	"enableCICD": true,
+	"apps": [
+		{
+			"id": "3e49a577-7689-4619-b064-0656fad84af5",
+			"application": "northwind_app",
+			"title": "Northwind Demo Application",
+			"description": "Northwind Demo Application",
+			"package": {
+				"id": "9897f936-67dc-40e3-8136-9b0ef7bd2c81"
+			}
+		},
+		{
+			"id": "39cddd94-f90d-4d79-8e84-a109a48a7a59",
+			"application": "planet9_btp_login",
+			"title": "Planet 9 BTP SSO Login",
+			"description": "Planet 9 BTP SSO Login",
+			"package": {
+				"id": "9897f936-67dc-40e3-8136-9b0ef7bd2c81"
+			}
+		}
+	],
+	"api": [],
+	"odataSource": [
+		{
+			"id": "1f38e837-3563-4c65-a4b6-cfb1998bae5a",
+			"name": "northwind_odata",
+			"description": "Northwind OData v2 Service",
+			"apiGroup": null
+		}
+	],
+	"odataMock": [],
+	"dictionary": [],
+	"jsclass": [],
+	"jsscript_group": [],
+	"theme": [],
+	"pdf": [],
+	"rulesengine": [],
+	"reports": [],
+	"api_authentication": [],
+	"api_group": [],
+	"tile": [],
+	"category": [],
+	"launchpad": [
+		{
+			"id": "1636e82e-03ca-4b5f-ad17-ffc1766c1b4a",
+			"name": "northwind_launchpad",
+			"description": "Northwind Single App Launchpad"
+		}
+	],
+	"certificates": [],
+	"role": [],
+	"systems": [],
+	"doc": [],
+	"wf_notifications": [],
+	"department": [],
+	"script_scheduler": [],
+	"wf_definition": [],
+	"connector": [],
+	"events": [],
+	"code_snippets": [],
+	"wf_determination": [],
+	"wf_taskaction": []
+}
