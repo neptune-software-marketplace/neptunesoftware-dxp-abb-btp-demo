@@ -1,0 +1,68 @@
+<script type="text/javascript" src="/public/ms/msal.js?neptune-cache-buster" crossorigin="anonymous"></script>
+<link rel="shortcut icon" href="/public/images/connect/favicon.svg?neptune-cache-buster" />
+<script type="text/javascript" src="/public/js/Style-dbg.js?neptune-cache-buster"></script>
+<script>
+    function setLoginWidth() {
+        const topMenu = neptune.byId('topMenu');
+        if (typeof topMenu === 'undefined') return;
+
+        const layout = AppCache.CurrentLayout;
+
+        topMenu.removeStyleClass("nepLoginXXXLarge");
+        topMenu.removeStyleClass("nepLoginXXLarge");
+        topMenu.removeStyleClass("nepLoginXLarge");
+        topMenu.removeStyleClass("nepLoginLarge");
+        topMenu.removeStyleClass("nepLoginMedium");
+        topMenu.removeStyleClass("nepLoginSmall");
+        topMenu.removeStyleClass("nepLoginXSmall");
+        topMenu.removeStyleClass("nepLoginXXSmall");
+        topMenu.removeStyleClass("nepLoginXXXSmall");
+
+        if (!!layout.LOGIN_WIDTH) topMenu.addStyleClass(`nepLogin${layout.LOGIN_WIDTH}`);
+    }
+    function applyLayout(config) {
+        if (AppCache.CurrentLayout.THEME !== sap.ui.getCore().getConfiguration().getTheme()) {
+            sap.ui.getCore().applyTheme(AppCache.CurrentLayout.THEME);
+        }
+        else {
+            afterTheme();
+        }
+    };
+    function afterTheme() {
+
+        if (!AppCache.CurrentLayout) return;
+
+        neptune.Style.setCssVariables(AppCache.CurrentLayout.THEME);
+        const style = neptune.Style.getLayoutCss({
+            layout: AppCache.CurrentLayout,
+        });
+        
+        setLoginWidth();
+
+        const link = document.querySelector("link[type='image/x-icon']") || document.createElement('link');
+        link.type = 'image/x-icon';
+        link.rel = 'shortcut icon';
+        link.href = style.faviconUrl;
+        document.getElementsByTagName('head')[0].appendChild(link);
+
+        if (typeof AppCacheShellLogoDesktop !== "undefined") AppCacheShellLogoDesktop.setSrc(style.logoDesktop);
+        if (typeof AppCacheShellBrandImgBottom !== "undefined") AppCacheShellBrandImgBottom.setSrc(style.brandImg);
+        
+        const elem = document.getElementById("NeptuneStyleCSSDiv")
+        if (!!elem) elem.innerHTML = style.css;
+    };
+
+    sap.ui.getCore().attachThemeChanged(function () {
+        afterTheme();
+    });
+
+    if (neptune.Style.isDarkModeEnabled && AppCache.layoutPreference !== 1 && AppCache.layoutPreference !== 3) {
+        document.documentElement.classList.add("nepThemeDark");
+        AppCache.CurrentLayout = AppCache.layoutDark;
+    } else {
+        document.documentElement.classList.add("nepThemeLight");
+        AppCache.CurrentLayout = AppCache.layoutLight;
+    }
+    document.documentElement.classList.add("nepLogon");
+    applyLayout();
+</script>

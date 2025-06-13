@@ -1,19 +1,21 @@
-function logonSAP(rec, logonType) {
+function logonLocal(rec) {
     $.ajax({
         type: 'POST',
         contentType: 'application/json',
-        url: `/user/logon/sap/${logonType.path}`,
+        url: '/user/logon/local',
+        headers: {
+            'login-path': location.pathname,
+        },
         data: JSON.stringify(rec),
         success: function (data, xhr) {
-            if (data.status === 'UpdatePassword') {
-                    formLogin.setVisible(false);
-                    formForgot.setVisible(false);
-                    formNewPassord.setVisible(true);
-                    txtFormNewPassRequired.setVisible(true);
-                    logonScreen.sapData = { detail: rec, path: logonType.path };
+            if (data.status === "UpdatePassword") {
+                const url = new URL(data.link, location.href);
+                url.searchParams.append('reason', data.reason || 'other');
+                url.searchParams.append('redirect', encodeURIComponent(location.href));
+                location.replace(url.toString());
             } else {
                 location.reload(true);
-            }
+            }        
         },
         error: function (result, status, other) {
             console.log(result, status, other)

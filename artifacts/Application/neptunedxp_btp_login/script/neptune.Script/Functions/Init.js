@@ -16,9 +16,7 @@ const searchParams = url.searchParams;
 const token = searchParams.get("token");
 
 if (token) {
-    formLogin.setVisible(false);
-    formForgot.setVisible(false);
-    formNewPassord.setVisible(true);
+    logonScreen.showForm(`newPassword`);
 
     const passwordReason = searchParams.get("reason");
     if (passwordReason === "expired") {
@@ -39,28 +37,12 @@ if (!isMobile) {
     }, 10);
 }
 
-// Phone
-setTimeout(function () {
-    if (sap.ui.Device.system.phone) {
-        flexLogon.setHeight("100%");
-        flexLogon.setWidth("100%");
-        flexLogon.addStyleClass("nepFlexPhone");
-        panLogonLocal.setWidth("100%");
-        panLogonLocal.setHeight("100%");
-        panLogonLocal.removeStyleClass("nepPanLogonBorder");
-    }
-}, 100);
+sap.ui.getCore().attachInit(() => {
+    const logoSrc = `data:image/svg+xml;base64,PHN2ZyBpZD0ibmVwdHVuZS1jb25uZWN0LWxvZ28iIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjM2IiB2aWV3Qm94PSIwIDAgOTQwLjY5IDQ0MC41MiI+PHBhdGggc3R5bGU9ImZpbGw6IHJnYigyNTUsIDE1OCwgNTEpOyBzdHJva2Utd2lkdGg6IDBweDsiIGQ9Ik05NDAuNywyMjAuMjZsLTIzMy4wNC4xMi0xMTYuNDcsMjAxLjY2LTExMi43LTE5NS4xOWMtLjQ5LS45My0zLjgxLTYuMjgtMy44MS02LjI4LDAsMC0zLjMxLDUuMzMtMy43Nyw2LjIzLS4wMi4wMS0uMDIuMDItLjAzLjAzbC01OS4wNywxMDIuMjMtLjc3LDEuMzNjLTE5LjA0LDMyLjkxLTQ2LjM1LDYwLjQ1LTc5LjEsNzkuNzVzLTcwLjkyLDMwLjM4LTExMS42OCwzMC4zOEM5OC42Miw0NDAuNTIsMCwzNDEuOSwwLDIyMC4yNlM5OC42MiwwLDIyMC4yNiwwQzMwMS43OSwwLDM3Mi45OCw0NC4zLDQxMS4wNiwxMTAuMTR2LS4wMmw1OS44NCwxMDMuNTdoLjAxYy42MiwxLDMuNzksNi44NiwzLjc5LDYuODYsMCwwLDMuMDktNS43MSwzLjc0LTYuNzkuMDEtLjAxLjAxLS4wMi4wMi0uMDJsMTEyLjczLTE5NS4yN2gyMzNsMTE2LjUxLDIwMS43OVoiLz48L3N2Zz4=`;
+    AppCacheShellLogoDesktop.setSrc(logoSrc);
+    document.documentElement.classList.remove("nepSplash");
 
-/*
-The global setTimeout() method sets a timer which executes a function or specified piece of code once the timer expires.
-*/
-
-// Custom Init - Happens only once when mounting the component
-sap.ui.getCore().attachInit(function (startParams) {
     setTimeout(function () {
-
-        debugger;
-
         // Check if in iframe
         const inIframe = window.self !== window.top;
 
@@ -71,16 +53,8 @@ sap.ui.getCore().attachInit(function (startParams) {
             // Fallback to standard login page
             oApp.setVisible(true);
         }
-        
     }, 500);
 });
-
-function getParameterValue(field, url) {
-    var windowLocationUrl = url ? url : href;
-    var reg = new RegExp("[?&]" + field + "=([^&#]*)", "i");
-    var string = reg.exec(windowLocationUrl);
-    return string ? string[1] : null;
-}
 
 function btpLogin() {
     let logonid = inLoginTypes.getSelectedKey() || "local";
@@ -126,7 +100,7 @@ function btpLogin() {
             console.error("Unhandled logon type");
             
             // Fallback on standard custom login application
-            oApp.setVisible(true);
+            appShell.setVisible(true);
             break;
     }
 }
@@ -145,3 +119,5 @@ let sort_by = function (field, reverse, primer) {
         return (a = key(a)), (b = key(b)), reverse * ((a > b) - (b > a));
     };
 };
+window.AppCacheShellLogoDesktop = AppCacheShellLogoDesktop;
+window.AppCacheShellBrandImgBottom = AppCacheShellBrandImgBottom;

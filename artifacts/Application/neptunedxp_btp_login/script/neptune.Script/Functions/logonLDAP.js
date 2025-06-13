@@ -4,6 +4,9 @@ function logonLDAP(rec, data) {
         contentType: 'application/json',
         url: '/user/logon/' + data.type + '/' + data.path,
         data: JSON.stringify(rec),
+        headers: {
+            'login-path': location.pathname,
+        },
         success: function (data) {
             location.reload(true);
         },

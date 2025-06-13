@@ -1,0 +1,12 @@
+let logonid = inLoginTypes.getSelectedKey() || 'local';
+let logon = ModelData.FindFirst(formLogons, 'id', logonid);
+
+if (logon) {
+    if (logon.type === 'azure-bearer') {
+        AppCacheLogonAzure.Logoff(logon);
+    } else if (logon.type === 'openid-connect') {
+        await logoffOpenIDConnect(logon);
+    } else if (logon.type === 'saml') {
+        externalAuthUserLogoutUsingPopup(logon.logoutUrl, 1500);
+    }
+}

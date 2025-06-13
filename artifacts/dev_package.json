@@ -3,30 +3,29 @@
 	"createdAt": "2025-06-11T11:44:30.692Z",
 	"createdBy": "leo.vanhengel@neptune-software.com",
 	"git": {
-		"remote": "https://github.com/neptune-software-marketplace/neptunesoftware-dxp-abb-btp-demo.git"
+		"remote": "https://github.com/neptune-software-marketplace/neptunesoftware-dxp-abb-btp-demo.git",
+		"branch": "master"
 	},
 	"name": "neptunesoftware-dxp-abb-btp-demo",
 	"description": "Neptune DXP on SAP BTP Demo Applications",
-	"ver": "25.06.12.1322",
+	"ver": "25.06.13.0804",
 	"enableCICD": true,
+	"internalReadOnly": false,
+	"oeVersion": null,
+	"excludeTemplateFiles": false,
+	"roles": [],
 	"apps": [
+		{
+			"id": "8a2fa34c-d509-4cab-b7ab-c3852adc7890",
+			"application": "neptunedxp_btp_login",
+			"title": "Login - Neptune DXP Open Edition",
+			"description": "Login - Neptune DXP Open Edition"
+		},
 		{
 			"id": "3e49a577-7689-4619-b064-0656fad84af5",
 			"application": "northwind_app",
 			"title": "Northwind Demo Application",
-			"description": "Northwind Demo Application",
-			"package": {
-				"id": "9897f936-67dc-40e3-8136-9b0ef7bd2c81"
-			}
-		},
-		{
-			"id": "39cddd94-f90d-4d79-8e84-a109a48a7a59",
-			"application": "planet9_btp_login",
-			"title": "Planet 9 BTP SSO Login",
-			"description": "Planet 9 BTP SSO Login",
-			"package": {
-				"id": "9897f936-67dc-40e3-8136-9b0ef7bd2c81"
-			}
+			"description": "Northwind Demo Application"
 		}
 	],
 	"api": [],
@@ -49,7 +48,9 @@
 	"api_authentication": [],
 	"api_group": [],
 	"tile": [],
+	"tile_layout": [],
 	"category": [],
+	"tilegroup_layout": [],
 	"launchpad": [
 		{
 			"id": "1636e82e-03ca-4b5f-ad17-ffc1766c1b4a",
@@ -57,6 +58,7 @@
 			"description": "Northwind Single App Launchpad"
 		}
 	],
+	"launchpad_layout": [],
 	"certificates": [],
 	"role": [],
 	"systems": [],
@@ -69,5 +71,7 @@
 	"events": [],
 	"code_snippets": [],
 	"wf_determination": [],
-	"wf_taskaction": []
+	"wf_taskaction": [],
+	"theme_ui5": [],
+	"webapp": []
 }

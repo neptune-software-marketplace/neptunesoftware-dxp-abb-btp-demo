@@ -1,0 +1,11 @@
+<style id="loginStyle">
+    .nepLogonLayout .nepLogonButtonLayout,
+    .nepLogonLayout .nepLogonSystemLayout {
+        padding: 0;
+    }
+    @media (max-width: 450px) {
+        .nepLogonContainer .nepBackdropContainer {
+            margin: 0;
+        }
+    }
+</style>
