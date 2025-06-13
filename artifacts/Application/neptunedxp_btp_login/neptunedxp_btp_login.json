@@ -1,7 +1,7 @@
 {
-	"id": "39cddd94-f90d-4d79-8e84-a109a48a7a59",
-	"createdAt": "2024-09-25T09:36:57.484Z",
-	"createdBy": "leo.vanhengel@neptune-software.com",
+	"id": "ed3b1fbf-7c53-49c3-8ec9-dab6be8dd5df",
+	"createdAt": "2025-06-13T08:08:20.907Z",
+	"createdBy": "admin",
 	"objects": [
 		{
 			"fieldNo": "b6d423bb-f992-4974-f8c5-d25c7e2a6c42",
@@ -2015,8 +2015,8 @@
 		}
 	],
 	"componentInterface": [],
-	"ver": "25.06.12.0758",
-	"application": "planet9_btp_login",
+	"ver": "25.06.13.0808",
+	"application": "neptunedxp_btp_login",
 	"title": "Planet 9 BTP SSO Login",
 	"description": "Planet 9 BTP SSO Login",
 	"enableFileStorage": false,

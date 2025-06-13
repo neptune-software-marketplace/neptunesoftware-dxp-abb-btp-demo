@@ -7,23 +7,23 @@
 	},
 	"name": "neptunesoftware-dxp-abb-btp-demo",
 	"description": "Neptune DXP on SAP BTP Demo Applications",
-	"ver": "25.06.12.1322",
+	"ver": "25.06.13.0807",
 	"enableCICD": true,
 	"apps": [
 		{
-			"id": "3e49a577-7689-4619-b064-0656fad84af5",
-			"application": "northwind_app",
-			"title": "Northwind Demo Application",
-			"description": "Northwind Demo Application",
+			"id": "ed3b1fbf-7c53-49c3-8ec9-dab6be8dd5df",
+			"application": "neptunedxp_btp_login",
+			"title": "Planet 9 BTP SSO Login",
+			"description": "Planet 9 BTP SSO Login",
 			"package": {
 				"id": "9897f936-67dc-40e3-8136-9b0ef7bd2c81"
 			}
 		},
 		{
-			"id": "39cddd94-f90d-4d79-8e84-a109a48a7a59",
-			"application": "planet9_btp_login",
-			"title": "Planet 9 BTP SSO Login",
-			"description": "Planet 9 BTP SSO Login",
+			"id": "3e49a577-7689-4619-b064-0656fad84af5",
+			"application": "northwind_app",
+			"title": "Northwind Demo Application",
+			"description": "Northwind Demo Application",
 			"package": {
 				"id": "9897f936-67dc-40e3-8136-9b0ef7bd2c81"
 			}

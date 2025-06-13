@@ -59,8 +59,6 @@ The global setTimeout() method sets a timer which executes a function or specifi
 sap.ui.getCore().attachInit(function (startParams) {
     setTimeout(function () {
 
-        debugger;
-
         // Check if in iframe
         const inIframe = window.self !== window.top;
 

@@ -9,8 +9,8 @@
 	"config": {
 		"enhancement": "",
 		"hideTopHeader": true,
-		"hideLoginSelection": true,
-		"hideLoginLocal": true
+		"hideLoginSelection": false,
+		"hideLoginLocal": false
 	},
 	"enhancement": [],
 	"name": "northwind_launchpad",
@@ -28,7 +28,7 @@
 	"customTheme": null,
 	"isExternal": null,
 	"emailPattern": null,
-	"loginApp": "planet9_btp_login",
+	"loginApp": "neptunedxp_btp_login",
 	"enableNotifications": false,
 	"firebaseProjectId": null,
 	"firebaseAppId": null,
@@ -46,7 +46,7 @@
 	"searchEnableShadeCalc": null,
 	"usedEnableShadeCalc": null,
 	"enableTrace": false,
-	"ver": "25.06.12.0756",
+	"ver": "25.06.13.0809",
 	"pwa_enable": false,
 	"pwa_customImageIos": null,
 	"pwa_customImageAndroidOld": null,
