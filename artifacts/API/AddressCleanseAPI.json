@@ -1,0 +1,57 @@
+{
+	"id": "5349df7a-2c32-4c9d-bb04-3e29fe989b9c",
+	"createdAt": "2023-09-30T22:13:31.176Z",
+	"createdBy": "admin",
+	"auth": [],
+	"endpoints": [],
+	"paths": [
+		{
+			"id": "1ee817cc-592a-4162-8110-d506d841d6b5",
+			"method": "POST",
+			"path": "/cleanse",
+			"description": "",
+			"parameters": [],
+			"headers": [],
+			"responses": [
+				{
+					"id": "02dd658d-0b9b-4d18-ab4a-7556bf2bc5ef",
+					"status": "200",
+					"description": "OK",
+					"headers": [],
+					"content": []
+				}
+			],
+			"content": [],
+			"auth": [],
+			"endpoints": [],
+			"serverScript": "814b535a-a500-4dcb-b960-1d32abcd3406",
+			"enableExample": false
+		}
+	],
+	"definitions": [],
+	"documentation": [],
+	"name": "AddressCleanseAPI",
+	"endpoint": "/api/serverscript/addresscleanseapi",
+	"ver": "25.06.26.2105",
+	"version": null,
+	"description": null,
+	"mediaType": null,
+	"securitySchemes": null,
+	"swaggerURI": null,
+	"swaggerSystem": null,
+	"apiType": "script",
+	"about": "<p><br></p>",
+	"enableProxy": false,
+	"forwardProxy": null,
+	"restrictAccess": false,
+	"enableTrace": false,
+	"enableIDE": true,
+	"internalAPI": false,
+	"isPublic": false,
+	"tlsAllowUntrusted": false,
+	"useOwnProcess": false,
+	"package": "9897f936-67dc-40e3-8136-9b0ef7bd2c81",
+	"apiGroup": "02aae3e8-8684-4e2f-b983-e396bf758ea7",
+	"apiFormat": 0,
+	"roles": []
+}

@@ -1,0 +1,85 @@
+{
+	"id": "d7f012da-f510-409f-9646-ff824ffa7bb0",
+	"createdAt": "2023-09-30T18:52:41.526Z",
+	"createdBy": "admin",
+	"fields": [
+		{
+			"id": "8c087731-d165-4a5a-bfa8-26311cc55efd",
+			"fieldName": "BusinessPartner",
+			"fieldType": "text",
+			"isUnique": false
+		},
+		{
+			"id": "ba1d4cef-08fc-4b21-9a15-ab276d2977b4",
+			"fieldName": "AddressID",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "35b3d10d-8963-4a8a-f4f5-702c648fdcc9",
+			"fieldName": "FullName",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "d9c9cccd-e4b0-434b-f894-2c5f7e096f0b",
+			"fieldName": "StreetName",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "e38fce9d-b773-4874-e262-d17e84444723",
+			"fieldName": "HouseNumber",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "4def3343-d5a4-4ec8-cca5-2ca757c2a892",
+			"fieldName": "PostalCode",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "16fdd360-daea-41ec-f905-b656cd2b7611",
+			"fieldName": "CityName",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "d3687880-194e-424a-abbe-b9bffed545df",
+			"fieldName": "Country",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "b2d6967a-2714-4001-87d3-93364816b683",
+			"fieldName": "Status",
+			"fieldType": "text",
+			"isUnique": false
+		},
+		{
+			"id": "eda5a96e-4a33-4ff6-a376-5dcd68ec71d9",
+			"fieldName": "SendToSAP",
+			"fieldType": "boolean",
+			"isUnique": false,
+			"isNullable": true
+		}
+	],
+	"indices": [],
+	"foreignKeys": [],
+	"name": "businesspartners",
+	"description": null,
+	"ver": "25.06.26.2046",
+	"enableAudit": false,
+	"includeDataInPackage": false,
+	"package": "9897f936-67dc-40e3-8136-9b0ef7bd2c81",
+	"rolesRead": [],
+	"rolesWrite": []
+}

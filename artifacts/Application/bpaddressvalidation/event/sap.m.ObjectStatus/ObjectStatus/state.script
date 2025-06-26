@@ -1,0 +1,10 @@
+if (typeof Status === "undefined" || Status === null || Status === "") { return; }  
+
+var formattedText = "None"; 
+if (Status === "Validated") {
+    formattedText = "Success"
+} else if (Status === "New"){
+    formattedText = "Warning"
+}
+
+return formattedText;

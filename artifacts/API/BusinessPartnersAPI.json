@@ -1,0 +1,385 @@
+{
+	"id": "d6b8b162-2ae0-4f0b-8d50-5a06c903af00",
+	"createdAt": "2023-09-30T19:20:07.479Z",
+	"createdBy": "admin",
+	"auth": [],
+	"endpoints": [],
+	"paths": [
+		{
+			"id": "a210deb7-c311-4231-f0ea-bd52df8ed77e",
+			"path": "/businesspartners",
+			"method": "GET",
+			"headers": [],
+			"parameters": [
+				{
+					"name": "where",
+					"description": [
+						"==OBJECT STRING==",
+						"{ \"fieldName\": \"value\"}  or { \"fieldName\": \"Not(value)\"} or { \"fieldName\": \"Between(1,10)\"} or {fieldName: In([\"value1\", \"value2\"])}",
+						" Other operators - LessThan(value), LessThanOrEqual(value), MoreThan(value), MoreThanOrEqual(value), Like(value), Any(value), IsNull(value), Raw(value)"
+					]
+				},
+				{
+					"name": "select",
+					"description": "fieldName1,fieldName2,fieldName3"
+				},
+				{
+					"name": "take",
+					"description": "Limit (paginated) - max number of entities that should be taken"
+				},
+				{
+					"name": "skip",
+					"description": "Offset (paginated) from where entities should be taken"
+				},
+				{
+					"name": "order",
+					"description": "{\"fieldName1\": \"ASC\", \"fieldName2\": \"DESC\"}"
+				}
+			],
+			"content": [],
+			"responses": [
+				{
+					"status": 200,
+					"headers": [],
+					"content": [
+						{
+							"objectType": "array",
+							"name": "businesspartners"
+						}
+					]
+				},
+				{
+					"status": 400,
+					"headers": [],
+					"content": [
+						{
+							"objectType": "object",
+							"name": "Error"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "68b3fb1c-c19b-4cbb-bdae-cd6ae346d817",
+			"path": "/businesspartners",
+			"method": "PUT",
+			"headers": [],
+			"parameters": [],
+			"content": [
+				{
+					"objectType": "array",
+					"name": "businesspartners"
+				}
+			],
+			"responses": [
+				{
+					"status": 200,
+					"headers": [],
+					"content": [
+						{
+							"objectType": "array",
+							"name": "businesspartners"
+						}
+					]
+				},
+				{
+					"status": 400,
+					"headers": [],
+					"content": [
+						{
+							"objectType": "object",
+							"name": "Error"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "27f0129f-b35c-4059-8dca-f06211014400",
+			"path": "/businesspartners",
+			"method": "POST",
+			"headers": [],
+			"parameters": [
+				{
+					"name": "where",
+					"example": [
+						"==OBJECT STRING==",
+						"{ \"fieldName\": \"value\"}  or { \"fieldName\": \"Not(value)\"} or { \"fieldName\": \"Between(1,10)\"} or {fieldName: In([\"value1\", \"value2\"])}",
+						" Other operators - LessThan(value), LessThanOrEqual(value), MoreThan(value), MoreThanOrEqual(value), Like(value), Any(value), IsNull(value), Raw(value)"
+					]
+				}
+			],
+			"content": [
+				{
+					"objectType": "array",
+					"name": "businesspartners"
+				}
+			],
+			"responses": [
+				{
+					"status": 200,
+					"headers": [],
+					"content": [
+						{
+							"objectType": "array",
+							"name": "businesspartners"
+						}
+					]
+				},
+				{
+					"status": 400,
+					"headers": [],
+					"content": [
+						{
+							"objectType": "object",
+							"name": "Error"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "6ac91a99-617d-4bec-b513-e383d63c8e4f",
+			"path": "/businesspartners",
+			"method": "DELETE",
+			"headers": [],
+			"parameters": [
+				{
+					"name": "where",
+					"example": [
+						"==OBJECT STRING==",
+						"{ \"fieldName\": \"value\"}  or { \"fieldName\": \"Not(value)\"} or { \"fieldName\": \"Between(1,10)\"} or {fieldName: In([\"value1\", \"value2\"])}",
+						" Other operators - LessThan(value), LessThanOrEqual(value), MoreThan(value), MoreThanOrEqual(value), Like(value), Any(value), IsNull(value), Raw(value)"
+					]
+				}
+			],
+			"content": [],
+			"responses": [
+				{
+					"status": 200,
+					"headers": [],
+					"content": [
+						{
+							"objectType": "array",
+							"name": "businesspartners"
+						}
+					]
+				},
+				{
+					"status": 400,
+					"headers": [],
+					"content": [
+						{
+							"objectType": "object",
+							"name": "Error"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "50fb4c3b-bfc1-4bc3-b629-a21fac08c4b9",
+			"path": "/businesspartners/count",
+			"method": "GET",
+			"headers": [],
+			"parameters": [
+				{
+					"name": "where",
+					"description": [
+						"==OBJECT STRING==",
+						"{ \"fieldName\": \"value\"}  or { \"fieldName\": \"Not(value)\"} or { \"fieldName\": \"Between(1,10)\"} or {fieldName: In([\"value1\", \"value2\"])}",
+						" Other operators - LessThan(value), LessThanOrEqual(value), MoreThan(value), MoreThanOrEqual(value), Like(value), Any(value), IsNull(value), Raw(value)"
+					]
+				}
+			],
+			"content": [],
+			"responses": [
+				{
+					"status": 200,
+					"headers": [],
+					"content": [
+						{
+							"objectType": "object",
+							"name": "count"
+						}
+					]
+				},
+				{
+					"status": 400,
+					"headers": [],
+					"content": [
+						{
+							"objectType": "object",
+							"name": "Error"
+						}
+					]
+				}
+			]
+		}
+	],
+	"definitions": [
+		{
+			"id": "d68dace0-b022-4191-eaa4-116346545daf",
+			"name": "businesspartners",
+			"properties": [
+				{
+					"id": "8b5da644-a03a-4444-d043-eb3b102c1627",
+					"parent": "",
+					"name": "id",
+					"description": "Unique record ID",
+					"objectType": "string"
+				},
+				{
+					"id": "39c6c4ba-bb63-431c-a24b-d970978fd0d7",
+					"parent": "",
+					"name": "BusinessPartner",
+					"objectType": "string"
+				},
+				{
+					"id": "06b03827-860d-4ede-cda8-03b8775d3322",
+					"parent": "",
+					"name": "FullName",
+					"objectType": "string"
+				},
+				{
+					"id": "9f3bae57-f26c-44d5-dcd9-4f982fc1e95c",
+					"parent": "",
+					"name": "StreetName",
+					"objectType": "string"
+				},
+				{
+					"id": "4da3cb51-271e-48a9-8d8d-742955d5fa08",
+					"parent": "",
+					"name": "HouseNumber",
+					"objectType": "string"
+				},
+				{
+					"id": "ad433b89-ecf2-4449-876d-687c96bc3b09",
+					"parent": "",
+					"name": "PostalCode",
+					"objectType": "string"
+				},
+				{
+					"id": "445b76ee-fd12-4a0d-9d18-1b479c355fa0",
+					"parent": "",
+					"name": "CityName",
+					"objectType": "string"
+				},
+				{
+					"id": "e3e5c022-7b9d-4c72-f25b-f1fe420e118c",
+					"parent": "",
+					"name": "Country",
+					"objectType": "string"
+				},
+				{
+					"id": "d6275178-1f68-46c0-81ef-316d95080744",
+					"parent": "",
+					"name": "Status",
+					"objectType": "string"
+				},
+				{
+					"id": "d285f206-81d1-49ef-dcdc-bb6114d53905",
+					"parent": "",
+					"name": "SendToSAP",
+					"objectType": "boolean"
+				},
+				{
+					"id": "c43da49e-208c-46cf-c1eb-c309bcee4aa2",
+					"parent": "",
+					"name": "createdAt",
+					"description": "Date when record was created",
+					"objectType": "number"
+				},
+				{
+					"id": "9fe3ffe6-7e1d-4367-aea4-6cdc37378bc5",
+					"parent": "",
+					"name": "createdBy",
+					"description": "Created By",
+					"objectType": "string"
+				},
+				{
+					"id": "a19305bd-bb9e-4ea3-c4bf-0c310239418b",
+					"parent": "",
+					"name": "updatedAt",
+					"description": "Date when record was updated",
+					"objectType": "number"
+				},
+				{
+					"id": "fa9c1cac-3f18-4354-8b2c-dd0a6985bbdd",
+					"parent": "",
+					"name": "updatedBy",
+					"description": "Updated By",
+					"objectType": "string"
+				}
+			]
+		},
+		{
+			"id": "770f56be-afde-4bb9-e8c3-d6b6f68a020d",
+			"name": "Error",
+			"properties": [
+				{
+					"id": "59de58db-ea92-46b0-c73b-d48920a758c6",
+					"parent": "",
+					"name": "status",
+					"objectType": "string",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"showNameField": true,
+					"children": []
+				},
+				{
+					"id": "9f923b2a-0b35-4c5e-c0cf-f9faa60654d7",
+					"parent": "",
+					"name": "message",
+					"objectType": "string",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"showNameField": true,
+					"children": []
+				}
+			]
+		},
+		{
+			"id": "d92fa01b-1e51-4a72-9c25-412073ec8a62",
+			"name": "count",
+			"properties": [
+				{
+					"id": "be2b8112-c79a-45a0-fa20-7c28cc75435e",
+					"parent": "",
+					"name": "count",
+					"objectType": "number"
+				}
+			]
+		}
+	],
+	"documentation": [],
+	"name": "BusinessPartnersAPI",
+	"endpoint": "/api/entity",
+	"ver": "25.06.26.2105",
+	"version": null,
+	"description": null,
+	"mediaType": "application/json",
+	"securitySchemes": null,
+	"swaggerURI": null,
+	"swaggerSystem": null,
+	"apiType": "table",
+	"about": "",
+	"enableProxy": false,
+	"forwardProxy": null,
+	"restrictAccess": false,
+	"enableTrace": false,
+	"enableIDE": true,
+	"internalAPI": false,
+	"isPublic": false,
+	"tlsAllowUntrusted": false,
+	"useOwnProcess": false,
+	"package": "9897f936-67dc-40e3-8136-9b0ef7bd2c81",
+	"apiGroup": "02aae3e8-8684-4e2f-b983-e396bf758ea7",
+	"apiFormat": 0,
+	"roles": []
+}

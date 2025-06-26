@@ -1,0 +1,19 @@
+{
+	"id": "51a6197b-5767-442b-b1f5-5892d040e1b2",
+	"createdAt": "2023-10-02T09:14:19.047Z",
+	"createdBy": "admin",
+	"name": "businessPartnerChange",
+	"description": null,
+	"eventAction": "ScriptEvent",
+	"scriptId": "14b98760-7345-4fde-a722-c025cd3a16b6",
+	"jobId": null,
+	"workflowId": null,
+	"package": "9897f936-67dc-40e3-8136-9b0ef7bd2c81",
+	"script": {
+		"id": "14b98760-7345-4fde-a722-c025cd3a16b6",
+		"name": "BusinessPartnerTrigger",
+		"ver": "25.06.25.0901"
+	},
+	"job": null,
+	"workflow": null
+}

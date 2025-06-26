@@ -1,0 +1,12 @@
+if (typeof Status === "undefined" || Status === null || Status === "") { return; }  
+
+var formattedText = ""; 
+if (Status === "Validated") {
+    formattedText = "sap-icon://sys-enter-2"
+} else if (Status === "New"){
+    formattedText = "sap-icon://alert"
+} else if (Status === "Modified") {
+    formattedText = "sap-icon://information"
+}
+
+return formattedText;

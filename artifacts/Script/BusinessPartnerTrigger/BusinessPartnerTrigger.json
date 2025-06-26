@@ -1,0 +1,35 @@
+{
+	"id": "14b98760-7345-4fde-a722-c025cd3a16b6",
+	"createdAt": "2023-09-30T23:07:32.923Z",
+	"createdBy": "admin",
+	"globalScripts": [],
+	"externalModules": [],
+	"entitySets": [
+		{
+			"id": "d7f012da-f510-409f-9646-ff824ffa7bb0",
+			"name": "businesspartners",
+			"contextname": "businesspartners"
+		}
+	],
+	"apis": [
+		{
+			"id": "20588fa0-c056-4639-bd64-836b8d2674ea",
+			"parent": "c8a8b8c0-c919-4025-9b22-adf4b6f86dfe",
+			"name": "/A_BusinessPartner",
+			"contextname": "A_BusinessPartner",
+			"method": "GET"
+		}
+	],
+	"name": "BusinessPartnerTrigger",
+	"ver": "25.06.25.0901",
+	"description": null,
+	"folder": null,
+	"content": "file:///content.js",
+	"useAsGlobalScript": false,
+	"transpiledContent": null,
+	"lastRunSuccessful": true,
+	"isTypescript": false,
+	"language": "javascript",
+	"jsscriptGroup": "dbd26b57-4ed2-4a90-a2d9-81ae30685325",
+	"package": "9897f936-67dc-40e3-8136-9b0ef7bd2c81"
+}

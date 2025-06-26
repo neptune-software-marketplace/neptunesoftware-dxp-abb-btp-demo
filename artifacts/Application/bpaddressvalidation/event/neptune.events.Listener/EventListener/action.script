@@ -1,0 +1,5 @@
+//
+apiGetBusinessPartnerAPI();
+
+// Use MessageToast
+sap.m.MessageToast.show("Event received");

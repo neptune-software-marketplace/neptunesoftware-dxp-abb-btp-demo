@@ -1,0 +1,21 @@
+var bindingItems = tabData.getBinding("items");
+
+// Length Counter
+oPageListHeaderNumber.setText("(" + bindingItems.iLength + ")");
+
+// Destroy Items
+oPageListFilterInputSort.destroyItems();
+oPageListFilterInputGroup.destroyItems();
+
+oPageListFilterInputSort.addItem(new sap.ui.core.Item({ key: "", text: "" }));
+oPageListFilterInputGroup.addItem(new sap.ui.core.Item({ key: "", text: "" }));
+
+// Get unique binding name 
+var bindingName = {};
+$.each(bindingItems.oModel.aBindings, function (i, data) {
+    if (!bindingName[data.sPath] && data.sPath.indexOf("/") === -1) {
+        bindingName[data.sPath] = true;
+        oPageListFilterInputSort.addItem(new sap.ui.core.ListItem({ key: data.sPath, text: data.sPath }));
+        oPageListFilterInputGroup.addItem(new sap.ui.core.ListItem({ key: data.sPath, text: data.sPath }));
+    }
+});
