@@ -40,6 +40,12 @@
 	],
 	"api": [
 		{
+			"id": "e81c2a04-53a3-4186-96ed-543cd6cdcf0c",
+			"name": "EventMeshWebhooks",
+			"description": null,
+			"apiGroup": "40abcba6-7bf1-45ae-ae6b-1a73d8393a1c"
+		},
+		{
 			"id": "d6b8b162-2ae0-4f0b-8d50-5a06c903af00",
 			"name": "BusinessPartnersAPI",
 			"description": null,
