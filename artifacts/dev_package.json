@@ -94,6 +94,11 @@
 	],
 	"jsclass": [
 		{
+			"id": "e60d00b8-ecb1-433c-be07-14cdd2ec3cfb",
+			"name": "BusinessPartner",
+			"description": null
+		},
+		{
 			"id": "814b535a-a500-4dcb-b960-1d32abcd3406",
 			"name": "AddressCleanse",
 			"description": null
@@ -109,6 +114,11 @@
 			"id": "dbd26b57-4ed2-4a90-a2d9-81ae30685325",
 			"name": "AddressValidation",
 			"description": null
+		},
+		{
+			"id": "559607e7-18c7-4180-8f97-4519bcb38289",
+			"name": "EventMeshWebhooks",
+			"description": ""
 		}
 	],
 	"theme": [],
