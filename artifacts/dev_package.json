@@ -128,6 +128,11 @@
 	"api_authentication": [],
 	"api_group": [
 		{
+			"id": "40abcba6-7bf1-45ae-ae6b-1a73d8393a1c",
+			"name": "SAP Event Mesh - Webhook",
+			"description": null
+		},
+		{
 			"id": "02aae3e8-8684-4e2f-b983-e396bf758ea7",
 			"name": "SAP BTP Address Validation Demo",
 			"description": null
