@@ -8,7 +8,7 @@
 	},
 	"name": "neptunesoftware-dxp-abb-btp-demo",
 	"description": "Neptune DXP on SAP BTP Demo Applications",
-	"ver": "25.06.13.0804",
+	"ver": "25.06.13.0807",
 	"enableCICD": true,
 	"internalReadOnly": false,
 	"oeVersion": null,
@@ -16,10 +16,16 @@
 	"roles": [],
 	"apps": [
 		{
-			"id": "8a2fa34c-d509-4cab-b7ab-c3852adc7890",
+			"id": "f75d6984-d983-4c00-905e-48233570023f",
+			"application": "bpaddressvalidation",
+			"title": "BP Address Validation",
+			"description": "Business Partner Address Validation App"
+		},
+		{
+			"id": "ed3b1fbf-7c53-49c3-8ec9-dab6be8dd5df",
 			"application": "neptunedxp_btp_login",
-			"title": "Login - Neptune DXP Open Edition",
-			"description": "Login - Neptune DXP Open Edition"
+			"title": "Planet 9 BTP SSO Login",
+			"description": "Planet 9 BTP SSO Login"
 		},
 		{
 			"id": "3e49a577-7689-4619-b064-0656fad84af5",
@@ -28,30 +34,133 @@
 			"description": "Northwind Demo Application"
 		}
 	],
-	"api": [],
+	"api": [
+		{
+			"id": "e81c2a04-53a3-4186-96ed-543cd6cdcf0c",
+			"name": "EventMeshWebhooks",
+			"description": null,
+			"apiGroup": "40abcba6-7bf1-45ae-ae6b-1a73d8393a1c"
+		},
+		{
+			"id": "d6b8b162-2ae0-4f0b-8d50-5a06c903af00",
+			"name": "BusinessPartnersAPI",
+			"description": null,
+			"apiGroup": "02aae3e8-8684-4e2f-b983-e396bf758ea7"
+		},
+		{
+			"id": "c8a8b8c0-c919-4025-9b22-adf4b6f86dfe",
+			"name": "API_BUSINESS_PARTNER",
+			"description": null,
+			"apiGroup": "02aae3e8-8684-4e2f-b983-e396bf758ea7"
+		},
+		{
+			"id": "c5a74b2b-2b87-40fc-99cf-ee51d2751f26",
+			"name": "SAP BTP Data Quality Service",
+			"description": null,
+			"apiGroup": "02aae3e8-8684-4e2f-b983-e396bf758ea7"
+		},
+		{
+			"id": "5349df7a-2c32-4c9d-bb04-3e29fe989b9c",
+			"name": "AddressCleanseAPI",
+			"description": null,
+			"apiGroup": "02aae3e8-8684-4e2f-b983-e396bf758ea7"
+		}
+	],
 	"odataSource": [
 		{
 			"id": "1f38e837-3563-4c65-a4b6-cfb1998bae5a",
 			"name": "northwind_odata",
 			"description": "Northwind OData v2 Service",
 			"apiGroup": null
+		},
+		{
+			"id": "0417e1e0-d680-465b-be26-fd2114fa00ff",
+			"name": "API_BUSINESS_PARTNER",
+			"description": null,
+			"apiGroup": "02aae3e8-8684-4e2f-b983-e396bf758ea7"
 		}
 	],
 	"odataMock": [],
-	"dictionary": [],
-	"jsclass": [],
-	"jsscript_group": [],
+	"dictionary": [
+		{
+			"id": "d7f012da-f510-409f-9646-ff824ffa7bb0",
+			"name": "businesspartners",
+			"description": null
+		}
+	],
+	"jsclass": [
+		{
+			"id": "e60d00b8-ecb1-433c-be07-14cdd2ec3cfb",
+			"name": "BusinessPartner",
+			"description": null
+		},
+		{
+			"id": "814b535a-a500-4dcb-b960-1d32abcd3406",
+			"name": "AddressCleanse",
+			"description": null
+		},
+		{
+			"id": "14b98760-7345-4fde-a722-c025cd3a16b6",
+			"name": "BusinessPartnerTrigger",
+			"description": null
+		}
+	],
+	"jsscript_group": [
+		{
+			"id": "dbd26b57-4ed2-4a90-a2d9-81ae30685325",
+			"name": "AddressValidation",
+			"description": null
+		},
+		{
+			"id": "559607e7-18c7-4180-8f97-4519bcb38289",
+			"name": "EventMeshWebhooks",
+			"description": ""
+		}
+	],
 	"theme": [],
 	"pdf": [],
 	"rulesengine": [],
 	"reports": [],
 	"api_authentication": [],
-	"api_group": [],
-	"tile": [],
+	"api_group": [
+		{
+			"id": "40abcba6-7bf1-45ae-ae6b-1a73d8393a1c",
+			"name": "SAP Event Mesh - Webhook",
+			"description": null
+		},
+		{
+			"id": "02aae3e8-8684-4e2f-b983-e396bf758ea7",
+			"name": "SAP BTP Address Validation Demo",
+			"description": null
+		}
+	],
+	"tile": [
+		{
+			"id": "fd3d2d9c-7595-49fb-aa27-093c09d3af80",
+			"description": null,
+			"name": "Northwind"
+		},
+		{
+			"id": "b40df543-b536-4d06-9c9a-765a78604e75",
+			"description": null,
+			"name": "BP Address Validation"
+		}
+	],
 	"tile_layout": [],
-	"category": [],
+	"category": [
+		{
+			"id": "ddd28721-ec43-41f1-83dc-d3e9fe1003b5",
+			"description": null,
+			"name": "SAP BTP Demos"
+		}
+	],
 	"tilegroup_layout": [],
 	"launchpad": [
+		{
+			"id": "2a61f119-0f02-4225-b55e-37fbf53c0a39",
+			"name": "BTPDemo",
+			"description": null
+		},
 		{
 			"id": "1636e82e-03ca-4b5f-ad17-ffc1766c1b4a",
 			"name": "northwind_launchpad",
@@ -68,7 +177,18 @@
 	"script_scheduler": [],
 	"wf_definition": [],
 	"connector": [],
-	"events": [],
+	"events": [
+		{
+			"id": "7fb05033-7984-4eea-950e-6dccdd62ece6",
+			"name": "bpTableUpdate",
+			"description": null
+		},
+		{
+			"id": "51a6197b-5767-442b-b1f5-5892d040e1b2",
+			"name": "businessPartnerChange",
+			"description": null
+		}
+	],
 	"code_snippets": [],
 	"wf_determination": [],
 	"wf_taskaction": [],

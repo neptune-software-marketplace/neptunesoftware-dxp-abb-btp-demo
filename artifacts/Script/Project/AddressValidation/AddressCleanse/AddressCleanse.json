@@ -1,0 +1,28 @@
+{
+	"id": "814b535a-a500-4dcb-b960-1d32abcd3406",
+	"createdAt": "2023-09-30T21:58:58.028Z",
+	"createdBy": "admin",
+	"globalScripts": [],
+	"externalModules": [],
+	"entitySets": [],
+	"apis": [
+		{
+			"id": "53038474-b22a-4882-a663-4c508d73bf18",
+			"parent": "c5a74b2b-2b87-40fc-99cf-ee51d2751f26",
+			"name": "/addressCleanse",
+			"contextname": "addressCleanse",
+			"method": "POST"
+		}
+	],
+	"name": "AddressCleanse",
+	"ver": "25.06.26.1503",
+	"description": null,
+	"folder": null,
+	"content": "file:///content.js",
+	"useAsGlobalScript": false,
+	"lastRunSuccessful": false,
+	"isTypescript": false,
+	"language": "javascript",
+	"jsscriptGroup": "dbd26b57-4ed2-4a90-a2d9-81ae30685325",
+	"package": "9897f936-67dc-40e3-8136-9b0ef7bd2c81"
+}

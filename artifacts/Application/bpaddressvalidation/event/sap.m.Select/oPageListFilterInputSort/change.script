@@ -1,0 +1,7 @@
+var sorters = [];
+var asc = (oPageListFilterInputOrder.getSelectedKey() === "DESC");
+var binding = tabData.getBinding("items");
+
+if (oPageListFilterInputGroup.getSelectedKey()) sorters.push(new sap.ui.model.Sorter(oPageListFilterInputGroup.getSelectedKey(), asc, true));
+if (oPageListFilterInputSort.getSelectedKey()) sorters.push(new sap.ui.model.Sorter(oPageListFilterInputSort.getSelectedKey(), asc, false));
+binding.sort(sorters);

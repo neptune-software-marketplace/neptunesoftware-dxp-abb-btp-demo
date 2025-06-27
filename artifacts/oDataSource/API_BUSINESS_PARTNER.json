@@ -1,0 +1,18 @@
+{
+	"id": "0417e1e0-d680-465b-be26-fd2114fa00ff",
+	"createdAt": "2023-10-01T20:20:44.056Z",
+	"createdBy": "admin",
+	"auth": [],
+	"endpoints": [],
+	"name": "API_BUSINESS_PARTNER",
+	"ver": "25.06.26.2116",
+	"description": null,
+	"version": null,
+	"endpoint": "https://s4ides.neptune-software.com/sap/opu/odata/sap/API_BUSINESS_PARTNER",
+	"enableProxy": true,
+	"enableIDE": true,
+	"package": "9897f936-67dc-40e3-8136-9b0ef7bd2c81",
+	"apiGroup": "02aae3e8-8684-4e2f-b983-e396bf758ea7",
+	"tlsAllowUntrusted": false,
+	"odataVersion": "v2"
+}

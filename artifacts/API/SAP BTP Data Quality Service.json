@@ -1,0 +1,56 @@
+{
+	"id": "c5a74b2b-2b87-40fc-99cf-ee51d2751f26",
+	"createdAt": "2025-06-26T14:49:08.094Z",
+	"createdBy": "admin",
+	"auth": [],
+	"endpoints": [],
+	"paths": [
+		{
+			"id": "53038474-b22a-4882-a663-4c508d73bf18",
+			"method": "POST",
+			"path": "/addressCleanse",
+			"description": "",
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"description": "",
+					"required": true,
+					"value": "",
+					"default": "application/json",
+					"example": ""
+				}
+			],
+			"responses": [],
+			"content": [],
+			"auth": [],
+			"endpoints": []
+		}
+	],
+	"definitions": [],
+	"documentation": [],
+	"name": "SAP BTP Data Quality Service",
+	"endpoint": "https://sandbox.api.sap.com/dq",
+	"ver": "25.06.26.2115",
+	"version": null,
+	"description": null,
+	"mediaType": null,
+	"securitySchemes": null,
+	"swaggerURI": null,
+	"swaggerSystem": null,
+	"apiType": "",
+	"about": null,
+	"enableProxy": true,
+	"forwardProxy": null,
+	"restrictAccess": false,
+	"enableTrace": false,
+	"enableIDE": true,
+	"internalAPI": false,
+	"isPublic": false,
+	"tlsAllowUntrusted": false,
+	"useOwnProcess": false,
+	"package": "9897f936-67dc-40e3-8136-9b0ef7bd2c81",
+	"apiGroup": "02aae3e8-8684-4e2f-b983-e396bf758ea7",
+	"apiFormat": 1,
+	"roles": []
+}

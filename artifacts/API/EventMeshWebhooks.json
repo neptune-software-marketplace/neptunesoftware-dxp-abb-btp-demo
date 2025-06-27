@@ -1,0 +1,59 @@
+{
+	"id": "e81c2a04-53a3-4186-96ed-543cd6cdcf0c",
+	"createdAt": "2025-05-20T12:47:37.177Z",
+	"createdBy": "leo.vanhengel@neptune-software.com",
+	"auth": [],
+	"endpoints": [],
+	"paths": [
+		{
+			"id": "138f3471-fe12-426b-fc39-4b9d34a61c2d",
+			"method": "POST",
+			"path": "/BusinessPartner",
+			"description": "",
+			"parameters": [],
+			"headers": [
+				{
+					"name": "",
+					"description": "",
+					"required": false,
+					"value": "",
+					"default": "",
+					"example": ""
+				}
+			],
+			"responses": [],
+			"content": [],
+			"auth": [],
+			"endpoints": [],
+			"serverScript": "e60d00b8-ecb1-433c-be07-14cdd2ec3cfb",
+			"preRequestHook": null,
+			"enableExample": false
+		}
+	],
+	"definitions": [],
+	"documentation": [],
+	"name": "EventMeshWebhooks",
+	"endpoint": "/api/serverscript/eventmeshwebhooks",
+	"ver": "25.06.27.0644",
+	"version": null,
+	"description": null,
+	"mediaType": "application/json",
+	"securitySchemes": null,
+	"swaggerURI": null,
+	"swaggerSystem": null,
+	"apiType": "script",
+	"about": null,
+	"enableProxy": false,
+	"forwardProxy": null,
+	"restrictAccess": false,
+	"enableTrace": false,
+	"enableIDE": true,
+	"internalAPI": false,
+	"isPublic": false,
+	"tlsAllowUntrusted": false,
+	"useOwnProcess": false,
+	"package": "9897f936-67dc-40e3-8136-9b0ef7bd2c81",
+	"apiGroup": "40abcba6-7bf1-45ae-ae6b-1a73d8393a1c",
+	"apiFormat": 1,
+	"roles": []
+}

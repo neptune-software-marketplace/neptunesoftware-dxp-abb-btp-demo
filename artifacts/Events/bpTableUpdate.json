@@ -1,0 +1,15 @@
+{
+	"id": "7fb05033-7984-4eea-950e-6dccdd62ece6",
+	"createdAt": "2023-10-04T11:33:05.158Z",
+	"createdBy": "admin",
+	"name": "bpTableUpdate",
+	"description": null,
+	"eventAction": "AppEvent",
+	"scriptId": null,
+	"jobId": null,
+	"workflowId": null,
+	"package": "9897f936-67dc-40e3-8136-9b0ef7bd2c81",
+	"script": null,
+	"job": null,
+	"workflow": null
+}
