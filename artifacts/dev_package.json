@@ -135,7 +135,13 @@
 			"name": "BP Address Validation"
 		}
 	],
-	"category": [],
+	"category": [
+		{
+			"id": "ddd28721-ec43-41f1-83dc-d3e9fe1003b5",
+			"description": null,
+			"name": "SAP BTP Demos"
+		}
+	],
 	"launchpad": [
 		{
 			"id": "2a61f119-0f02-4225-b55e-37fbf53c0a39",
