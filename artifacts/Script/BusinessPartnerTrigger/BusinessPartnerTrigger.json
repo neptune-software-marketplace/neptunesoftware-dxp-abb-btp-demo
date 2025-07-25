@@ -21,7 +21,7 @@
 		}
 	],
 	"name": "BusinessPartnerTrigger",
-	"ver": "25.06.25.0901",
+	"ver": "25.07.25.0822",
 	"description": null,
 	"folder": null,
 	"content": "file:///content.js",

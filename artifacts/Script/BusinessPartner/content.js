@@ -14,9 +14,9 @@ if (Object.keys(payload).length === 0) {
 log.info(payload);
 
 try {
-    await p9.events.publish("businessPartnerChange", payload);
+    p9.events.publish("businessPartnerChange", payload);
     log.info("Event published");
-    //complete();
+    complete();
 } catch (error) {
     log.error("Error publishing event: " + error);
     fail();

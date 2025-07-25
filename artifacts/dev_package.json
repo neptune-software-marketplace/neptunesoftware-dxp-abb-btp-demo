@@ -7,7 +7,7 @@
 	},
 	"name": "neptunesoftware-dxp-abb-btp-demo",
 	"description": "Neptune DXP on SAP BTP Demo Applications",
-	"ver": "25.06.13.0807",
+	"ver": "25.06.27.0645",
 	"enableCICD": true,
 	"apps": [
 		{
