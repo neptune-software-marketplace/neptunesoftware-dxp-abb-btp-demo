@@ -3,15 +3,11 @@ function logonLocal(rec) {
         type: 'POST',
         contentType: 'application/json',
         url: '/user/logon/local',
-        headers: {
-            'login-path': location.pathname,
-        },
         data: JSON.stringify(rec),
         success: function (data, xhr) {
             if (data.status === "UpdatePassword") {
                 const url = new URL(data.link, location.href);
                 url.searchParams.append('reason', data.reason || 'other');
-                url.searchParams.append('redirect', encodeURIComponent(location.href));
                 location.replace(url.toString());
             } else {
                 location.reload(true);

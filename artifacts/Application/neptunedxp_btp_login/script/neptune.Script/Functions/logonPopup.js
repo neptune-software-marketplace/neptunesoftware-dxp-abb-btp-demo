@@ -1,9 +1,11 @@
 function showLogonPopupAndWaitForCallbackUrl(url) {
     return new Promise(function (resolve, reject) {
-        const popup = showPopup(url);
+        const popup = showLogonPopup(url);
+
+        console.log("popup", popup);
 
         (function check() {
-            if (popup.closed) {
+            if (popup && popup.closed) {
                 return resolve();
             }
 
@@ -24,7 +26,8 @@ function showLogonPopupAndWaitForCallbackUrl(url) {
     });
 }
 
-function showPopup(url) {
+function showLogonPopup(url) {
+
     const popUpWidth = 483;
     const popUpHeight = 600;
 
@@ -38,6 +41,7 @@ function showPopup(url) {
     const top = ((height / 2) - (popUpHeight / 2)) + winTop;
 
     const logonWin = window.open(url, 'Login ', 'location=no,width=' + popUpWidth + ',height=' + popUpHeight + ',left=' + left + ',top=' + top);
+    
     if (logonWin.focus) logonWin.focus();
 
     return logonWin;

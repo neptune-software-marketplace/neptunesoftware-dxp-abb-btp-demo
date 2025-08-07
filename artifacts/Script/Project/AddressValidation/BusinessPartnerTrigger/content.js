@@ -48,25 +48,8 @@ if (businessPartnerID) {
             const entity = await entities.businesspartners.findOne({
                 BusinessPartner: businessPartnerID,
             });
-            const bp = {
-                BusinessPartner: businesspartner.BusinessPartner,
-                AddressID: businesspartner.to_BusinessPartnerAddress?.results[0]?.AddressID,
-                FullName: businesspartner.BusinessPartnerFullName,
-                StreetName: businesspartner.to_BusinessPartnerAddress?.results[0]?.StreetName,
-                HouseNumber: businesspartner.to_BusinessPartnerAddress?.results[0]?.HouseNumber,
-                PostalCode: businesspartner.to_BusinessPartnerAddress?.results[0]?.PostalCode,
-                CityName: businesspartner.to_BusinessPartnerAddress?.results[0]?.CityName,
-                Country: businesspartner.to_BusinessPartnerAddress?.results[0]?.Country,
-                Status:
-                    type === "sap.s4.beh.businesspartner.v1.BusinessPartner.Changed.v1"
-                        ? "Modified"
-                        : "New",
-                SendToSAP: false,
-            };
 
-            log.info(bp);
-
-            // Destructure
+            // Destructure OData object
             const {
                 BusinessPartner,
                 BusinessPartnerFullName,
@@ -77,8 +60,7 @@ if (businessPartnerID) {
                 },
             } = businesspartner;
 
-            // Now you have a single object with all fields
-            const bp2 = {
+            const bp = {
                 BusinessPartner,
                 FullName: BusinessPartnerFullName,
                 AddressID,
@@ -94,25 +76,7 @@ if (businessPartnerID) {
                 SendToSAP: false,
             };
 
-            log.info(bp2);
-
-            const flattenObject = ({
-                businesspartner: {
-                    BusinessPartner,
-                    to_BusinessPartnerAddress: { e, f },
-                },
-                c: c2,
-                ...rest
-            }) => {
-                return {
-                    a,
-                    b_c: c,
-                    b_d_e: e,
-                    b_d_f: f,
-                    c: c2,
-                    ...rest,
-                };
-            };
+            log.info(bp);
 
             // Update or Insert
             if (entity) {

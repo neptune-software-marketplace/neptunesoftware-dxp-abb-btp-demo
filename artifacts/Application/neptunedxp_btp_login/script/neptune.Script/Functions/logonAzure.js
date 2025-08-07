@@ -6,7 +6,7 @@ let AppCacheLogonAzure = {
     msalObj: null,
     loginScopes: ['user.read', 'profile', 'openid', 'offline_access'],
 
-    InitMsal: async function () {
+    InitMsal: function () {
         this.msalObj = new msal.PublicClientApplication({
             auth: {
                 clientId: this.options.clientID,
@@ -18,10 +18,11 @@ let AppCacheLogonAzure = {
                 storeAuthStateInCookie: false, // Set this to 'true' if you are having issues on IE11 or Edge
             }
         });
-        await this.msalObj.initialize();
     },
 
     Logon: async function (options, loginHint) {
+        panLogon.setBusy(true);
+        
         this.options = options;
 
         if (this.useMsal()) {
@@ -42,25 +43,19 @@ let AppCacheLogonAzure = {
         let top = ((height / 2) - (popUpHeight / 2)) + winTop;
         
         const nonce = this.options.excludeNonce ? undefined : await setSessionNonce('azure-bearer', this.options.path);
-        let logonWin = window.open(
-            this._loginUrl(loginHint, nonce),
-            'Login',
-            `location=no,width=${popUpWidth},height=${popUpHeight},left=${left},top=${top}`
-        );
-
-        // popup blocked
-        if(!logonWin || logonWin.closed || typeof logonWin.closed === 'undefined') {
-            diaPopupBlocked.open();
-            return;
-        }
+        let logonWin = window.open(this._loginUrl(loginHint, nonce), 'Login ', 'location=no,width=' + popUpWidth + ',height=' + popUpHeight + ',left=' + left + ',top=' + top);
 
         if (logonWin.focus) logonWin.focus();
 
+        window.logonWin = logonWin;
+
         AppCacheLogonAzure._waitForPopupDesktop(logonWin, function (url) {
+
             let authResponse = AppCacheLogonAzure._getHashParams(url);
 
             // Get response
             if (authResponse) {
+
                 //Prevent cross-site request forgery attacks
                 if (parseInt(authResponse.state) !== AppCacheLogonAzure.state) {
                     sap.m.MessageToast.show('Cross-site request forgery detected');
@@ -100,12 +95,20 @@ let AppCacheLogonAzure = {
     },
 
     _loginMsal: async function () {
-        await this.InitMsal();
+        this.InitMsal();
         const nonce = await setSessionNonce('azure-bearer', this.options.path);
-        this.msalObj.loginPopup({ scopes: this.loginScopes, prompt: 'select_account', nonce }).then(function (response) {
+        this.msalObj.loginPopup({ scopes: this.loginScopes, prompt: 'select_account', nonce }).then((response) => {
             localStorage.setItem('p9azuretokenv2', JSON.stringify(response));
-            AppCacheLogonAzure._loginP9(response.idToken);
+
+            // only login if MSAL v2 is able to fetch any accounts, otherwise it will produce login errors in the launchpad
+            const accounts = this.msalObj.getAllAccounts();
+            if (Array.isArray(accounts) && accounts.length > 0) {
+                AppCacheLogonAzure._loginP9(response.idToken);
+            } else {
+                sap.m.MessageToast.show('MSAL v2 failed to fetch any accounts after login');
+            }
         }).catch(function (error) {
+            panLogon.setBusy(false);
             if (error && error.toString().indexOf('Failed to fetch') > -1) {
                 sap.m.MessageToast.show('Failed to fetch token. Redirect URI in azure must be set to Single Page Application');
             } else {
@@ -138,6 +141,8 @@ let AppCacheLogonAzure = {
                 AppCacheLogonAzure._loginP9(data.id_token);
             },
             error: function (request, status) {
+
+                panLogon.setBusy(false);
 
                 switch (request.status) {
 
@@ -208,13 +213,12 @@ let AppCacheLogonAzure = {
             url: '/user/logon/' + this.options.type + '/' + this.options.path,
             headers: {
                 'Authorization': 'Bearer ' + idToken,
-                'login-path': location.pathname,
             },
             success: function (data) {
                 location.reload(true);
             },
             error: function (result, status) {
-                sap.m.MessageToast.show(`Error logging in: ${result?.responseJSON?.status || 'Internal Server Error'}`);
+                panLogon.setBusy(false);
             }
         });
     },
@@ -239,14 +243,17 @@ let AppCacheLogonAzure = {
 
             if (popupWin.closed || url.indexOf('error=') > -1) {
                 clearInterval(winCheckTimer);
+                panLogon.setBusy(false);
             }
 
             if (url.indexOf('code=') > -1) {
                 console.log(url);
                 clearInterval(winCheckTimer);
                 popupWin.close();
+                panLogon.setBusy(true);
                 onClose(url);
             }
         }, 100);
     },
+
 };

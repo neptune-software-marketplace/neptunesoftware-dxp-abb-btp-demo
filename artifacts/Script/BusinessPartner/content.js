@@ -5,21 +5,19 @@ if (Object.keys(payload).length === 0) {
     // Get the payload from readableState Buffer
     log.info("Payload not in req.body");
 
-    // This works in LTS23
-    const buffer = req._readableState.buffer.head.data;
+    // This works in LTS24
+    const buffer = req._readableState.buffer;
 
     payload = JSON.parse(buffer);
 }
 
-log.info(payload);
+log.info(JSON.stringify(payload));
 
 try {
-    await p9.events.publish("businessPartnerChange", payload);
+    p9.events.publish("businessPartnerChange", payload);
     log.info("Event published");
-    //complete();
+    complete();
 } catch (error) {
     log.error("Error publishing event: " + error);
     fail();
 }
-
-

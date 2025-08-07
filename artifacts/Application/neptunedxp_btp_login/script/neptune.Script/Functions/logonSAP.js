@@ -4,17 +4,13 @@ function logonSAP(rec, logonType) {
         contentType: 'application/json',
         url: `/user/logon/sap/${logonType.path}`,
         data: JSON.stringify(rec),
-        headers: {
-            'login-path': location.pathname,
-        },  
         success: function (data, xhr) {
             if (data.status === 'UpdatePassword') {
-                logonScreen.showForm(`newPassword`);
-                txtFormNewPassRequired.setVisible(true);
-                logonScreen.sapData = {
-                    detail: rec,
-                    path: logonType.path
-                };
+                    formLogin.setVisible(false);
+                    formForgot.setVisible(false);
+                    formNewPassord.setVisible(true);
+                    txtFormNewPassRequired.setVisible(true);
+                    logonScreen.sapData = { detail: rec, path: logonType.path };
             } else {
                 location.reload(true);
             }

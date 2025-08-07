@@ -64658,7 +64658,7 @@
 	"documentation": [],
 	"name": "API_BUSINESS_PARTNER",
 	"endpoint": "https://s4ides.neptune-software.com/sap/opu/odata/sap/API_BUSINESS_PARTNER",
-	"ver": "25.06.26.2115",
+	"ver": "25.08.07.1944",
 	"version": "1.0.0",
 	"description": null,
 	"mediaType": null,

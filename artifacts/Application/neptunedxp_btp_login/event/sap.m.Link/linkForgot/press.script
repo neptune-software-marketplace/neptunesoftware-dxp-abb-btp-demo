@@ -1,3 +1,4 @@
 inForgotUsername.setValue();
 inForgotUsername.setValueState();
-logonScreen.showForm(`forgotPassword`);
+formLogin.setVisible(false);
+formForgot.setVisible(true);

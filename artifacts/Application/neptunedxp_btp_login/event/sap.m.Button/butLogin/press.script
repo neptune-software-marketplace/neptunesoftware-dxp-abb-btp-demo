@@ -57,6 +57,7 @@ switch (logonType.type) {
         break;
 
     case 'openid-connect':
+        //logonOauth2(logonType);
         logonOpenIDConnect(logonType);
         break;
 

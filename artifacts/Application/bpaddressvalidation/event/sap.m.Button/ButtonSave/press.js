@@ -52,13 +52,7 @@ apiUpdateBusinessPartnerAPI(options).then(function (data) {
             },
             error: function (oError) {
                 App.setBusy(false);
-                MessageBox.error("Error", {
-                    actions: ["Manage Products", MessageBox.Action.CLOSE],
-                    emphasizedAction: "Manage Products",
-                    onClose: function (sAction) {
-                        MessageToast.show("Action selected: " + sAction);
-                    },
-                });
+                sap.m.MessageToast.show("Error occured!", oError);
             },
         }
     );

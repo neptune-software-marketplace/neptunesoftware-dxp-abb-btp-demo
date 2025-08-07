@@ -31,7 +31,7 @@
 	"documentation": [],
 	"name": "SAP BTP Data Quality Service",
 	"endpoint": "https://sandbox.api.sap.com/dq",
-	"ver": "25.06.26.2115",
+	"ver": "25.08.07.1945",
 	"version": null,
 	"description": null,
 	"mediaType": null,

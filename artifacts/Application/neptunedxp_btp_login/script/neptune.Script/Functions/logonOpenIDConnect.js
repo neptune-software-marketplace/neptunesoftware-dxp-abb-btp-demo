@@ -1,5 +1,6 @@
 function logonOpenIDConnect(logonType) {
     const path = logonType.path;
+
     showLogonPopupAndWaitForCallbackUrl('/user/logon/openid-connect/' + path)
         .then(function (callbackUrl) {
             if (callbackUrl) {
@@ -9,28 +10,11 @@ function logonOpenIDConnect(logonType) {
         });
 }
 
-async function logoffOpenIDConnect(logonType) {
-    const { path } = logonType;
-    const res = await fetch(`/user/logon/openid-connect/${path}/end_session_endpoint`);
-    const body = await res.json();
-    const { end_session_endpoint } = body;
-
-    const { id_token } = localStorage.p9oidctoken ? JSON.parse(localStorage.p9oidctoken) : {};
-    if (end_session_endpoint) {
-        const logoutUrl = id_token ? `${end_session_endpoint}?id_token_hint=${id_token}` : end_session_endpoint;
-        showPopup(logoutUrl);
-    }
-
-}
-
 function planet9LoginWithCode(authResponse, path) {    
     return new Promise(function(resolve, reject) {
         $.ajax({
             type: 'GET',
             url: '/user/logon/openid-connect/' + path + '/callback?' + $.param(authResponse),
-            headers: {
-                'login-path': location.pathname,
-            },
             success: function (data) {
                 localStorage.setItem('p9oidctoken', JSON.stringify(data));
                 location.reload();
@@ -85,6 +69,8 @@ function planet9LoginWithTokenTest() {
         })
     });
 }
+
+window.testLogin = planet9LoginWithTokenTest;
 
 function getHashParamsFromUrl(url) {
     if (url.indexOf('?') < 0) return;

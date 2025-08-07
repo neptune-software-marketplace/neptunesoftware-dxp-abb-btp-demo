@@ -5,7 +5,7 @@
 	"auth": [],
 	"endpoints": [],
 	"name": "API_BUSINESS_PARTNER",
-	"ver": "25.06.26.2116",
+	"ver": "25.08.07.1945",
 	"description": null,
 	"version": null,
 	"endpoint": "https://s4ides.neptune-software.com/sap/opu/odata/sap/API_BUSINESS_PARTNER",
